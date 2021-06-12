@@ -1,3 +1,28 @@
-PODFILE CHECKSUM: 523400e493e7950221ac9f8e427da0d110493e62
+PODS:
+  - IHKeyboardAvoiding (4.7)
+  - MBProgressHUD (1.2.0)
+  - ReachabilitySwift (5.0.0)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - IHKeyboardAvoiding
+  - MBProgressHUD
+  - ReachabilitySwift
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - IHKeyboardAvoiding
+    - MBProgressHUD
+    - ReachabilitySwift
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  IHKeyboardAvoiding: 4cae0880c3975feffa278495df894c5166e71ad0
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 0fed9c527805fa8f4ca49c4e2ccde2265a960a73
 
 COCOAPODS: 1.10.1

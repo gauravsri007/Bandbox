@@ -4,7 +4,12 @@
 target 'Bandboxlaundry' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'MBProgressHUD'
+  pod 'ReachabilitySwift'
+  pod 'IHKeyboardAvoiding'
+#  pod 'Kingfisher'
+  pod 'XLPagerTabStrip'
+#  pod 'Alamofire'
   # Pods for Bandboxlaundry
 
 end
