@@ -1,20 +1,22 @@
 //
-//  ProductList_Cell.swift
-//  Bandboxlaundry
+//  Menu_Cell.swift
+//  BharatScan
 //
-//  Created by kumar Gaurav on 12/06/21.
-//  Copyright © 2021 kumar Gaurav. All rights reserved.
+//  Created by KUMAR GAURAV on 06/08/20.
+//  Copyright © 2020 KUMAR GAURAV. All rights reserved.
 //
 
 import UIKit
 
-class ProductList_Cell: UITableViewCell {
+class Menu_Cell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBOutlet weak var menu_title: UILabel!
+    
+    @IBOutlet weak var img_menu: UIImageView!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

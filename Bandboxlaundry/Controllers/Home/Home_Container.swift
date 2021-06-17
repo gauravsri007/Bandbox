@@ -26,9 +26,9 @@ class Home_Container: ButtonBarPagerTabStripViewController {
           let personalInfo_VC = self.storyboard?.instantiateViewController(withIdentifier: "ProductList_VC") as! ProductList_VC
      
           guard isReload else {
-              return [personalInfo_VC, personalInfo_VC, personalInfo_VC]
+              return [personalInfo_VC]
           }
-          var childViewControllers = [personalInfo_VC, personalInfo_VC, personalInfo_VC]
+          var childViewControllers = [personalInfo_VC]
           for index in childViewControllers.indices {
               let nElements = childViewControllers.count - index
               let n = (Int(arc4random()) % nElements) + index

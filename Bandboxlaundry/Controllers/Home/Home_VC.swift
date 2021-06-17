@@ -8,118 +8,184 @@
 
 import UIKit
 import XLPagerTabStrip
+import IHKeyboardAvoiding
+
 //import SVProgressHUD
 //import Alamofire
 
 class Home_VC: UIViewController {
-    @IBOutlet weak var view_bg_sideMenu: UIView!
-    @IBOutlet weak var view_sideMenu: UIView!
+//    @IBOutlet weak var view_bg_sideMenu: UIView!
+//    @IBOutlet weak var view_sideMenu: UIView!
     
+    @IBOutlet weak var tblView_menu: UITableView!
+     @IBOutlet weak var view_menu: UIView!
+//    @IBOutlet weak var cons_menu_trailing: NSLayoutConstraint!
+    @IBOutlet weak var view_menu_bg: UIView!
+    
+    var arr_menu_values             : [String] = []
+    var arr_menu_imagaes            : [String] = []
+    var panGesture       = UIPanGestureRecognizer()
+    var isSideMenuSelected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setUIConfiguration()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
     
-    
     override func viewWillLayoutSubviews() {
-        self.setUI_SideMenu()
-        
-        self.view_folder_bg.isHidden = true
 
-        view_bg_sideMenu.isHidden = true
-        view_sideMenu.isHidden = true
-     
-
-
-    }
-    
-    func setUI_SideMenu(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        self.view_helping.addGestureRecognizer(tap)
-    }
-    
-    
-    @IBAction func clickedSideMenu(_ sender: Any) {
-
-          UIView.animate(
-              withDuration: 0.4,
-              delay: 0.0,
-              options: .curveLinear,
-              animations: {
-                  
-                  self.view.layoutIfNeeded()
-
-                  self.view_bg_sideMenu.frame.origin.x = 0
-                  self.view_sideMenu.isHidden = false
-                  self.view_bg_sideMenu.isHidden = false
-//                  self.view_helping.isHidden = false
-
-                  
-          }) { (completed) in
-          }
-          
       }
 
-       //MARK:- API
-        //MARK:-
+    func setUIConfiguration(){
+            
+//            self.cons_menu_trailing.constant = 0//self.view.frame.size.width
+//        print(" self.cons_menu_trailing.constant", self.cons_menu_trailing.constant)
+
+            arr_menu_values = ["Home","My Profile","My Order","My Basket","Offers","Notification","Privacy Policy","Terms of Service","Help & Support","Rate Us","Share with Friends","Logout"]
+            arr_menu_imagaes = ["home","account","order_history","my_cart","offer_zone","notification","privacy_policy","t&C","upport","rate_us","share","logout"]
+           
+            let tap_OnMenu = UITapGestureRecognizer(target: self, action: #selector(self.handleTap_menu(_:)))
+            self.view_menu_bg.addGestureRecognizer(tap_OnMenu)
+            
+            self.view_menu_bg.isHidden = true
+//            self.view_menu.isHidden = true
+
+            self.view_menu.frame.origin.x = -screenWidth
+            print("self.view_menu.frame.origin.x",self.view_menu.frame.origin.x)
         
-//        func get_Portfolio_Data_API(){
-//
-//            // * Chechk Whether Network is Unreachable *
-//            if !(NetworkManager.sharedInstance.reachability.connection != .unavailable){
-//                self.view.MyToast()
-//                return
-//            }
-//            SVProgressHUD.show()
-//            let body: NSMutableDictionary? = ["email":getEmail(),
-//                                              "request_type":"ios",
-//                                              "token":getToken()]
-//
-//            let strUrl = kBaseURL + "getPortfolioByEmail" as String
-//            let url = NSURL(string: strUrl)
-//            var request = URLRequest(url: url! as URL)
-//            request.httpMethod = "POST"
-//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            let data = try! JSONSerialization.data(withJSONObject:body as Any , options: JSONSerialization.WritingOptions.prettyPrinted)
-//
-//            let json = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-//            request.httpBody = json!.data(using: String.Encoding.utf8.rawValue)
-//            let alamoRequest = AF.request(request as URLRequestConvertible)
-//            alamoRequest.validate(statusCode: 200..<300)
-//            alamoRequest.responseString { response in
-//                SVProgressHUD.dismiss()
-//                switch response.result {
-//                case .success:
-//                    let resultsArray = response.value
-//                    let dic = convertToDictionary(text: resultsArray!)! as NSDictionary
-//                    let isSuccess : String = dic.value(forKey: "status") as! String
-//                    if isSuccess == "success"{
-//                        if let newDic = dic.value(forKey: "data") as? NSDictionary{
-//
-//
-//    //                    if let arr_active = newDic.value(forKey: "active_job") as? NSArray{
-//    //                        arr_Portfolio_Active_Job = arr_active
-//    //                    }
-//                        if let arrPortfolio = newDic.value(forKey: "portfolio") as? NSArray{
-//                            arr_Portfolio = arrPortfolio
-//                        }
-//
-//                    }
-//                    }
-//                case .failure(let error):
-//                    SVProgressHUD.dismiss()
-//                    GlobalMethods.manager.error_Log_API(error: "API -> getPortfolioByEmail , error ->\(error.localizedDescription)")
-//
-//                    break
-//                }
-//            }
-//        }
-  
+
+            
+        }
+    
+     @objc func handleTap_menu(_ sender: UITapGestureRecognizer? = nil) {
+      sideMenu_close()
+
+     }
+    
+    func sideMenu_open(){
+          UIView.animate(withDuration: Double(0.5), animations: {
+              //             self.cons_menu_trailing.constant = 66
+              self.view_menu.frame.origin.x = 0
+            self.navigationController?.navigationBar.isHidden = true
+
+              self.view.layoutIfNeeded()
+          })
+          { (completed) in
+              self.view_menu_bg.isHidden = false
+          }
+       
+    }
+    
+    func sideMenu_close(){
+        isSideMenuSelected = false
+        
+        self.view_menu_bg.isHidden = true
+        
+        UIView.animate(withDuration: Double(0.5), animations: {
+            self.view_menu.frame.origin.x = -screenWidth
+            self.view.layoutIfNeeded()
+        })
+        { (completed) in
+            self.navigationController?.navigationBar.isHidden = false
+
+        }
+    }
+     
+@IBAction func menu_clicked(_ sender: Any) {
+    isSideMenuSelected = !isSideMenuSelected
+    
+    if isSideMenuSelected{
+        
+        sideMenu_open()
+    }
+    else{
+        sideMenu_close()
+    }
+}
+ 
+    override func viewDidAppear(_ animated: Bool) {
+          
+          super.viewDidAppear(animated)
+          KeyboardAvoiding.avoidingView = self.view
+
+      }
 
 }
+
+
+
+extension Home_VC : UITableViewDataSource,UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.arr_menu_values.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Menu_Cell") as! Menu_Cell
+            cell.menu_title.text = arr_menu_values[indexPath.row]
+            cell.img_menu.image = UIImage(named: arr_menu_imagaes[indexPath.row])
+            return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+            return 52
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+//            tableView.deselectRow(at: indexPath, animated: true)
+//            switch indexPath.row {
+//            case 0:
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "VisionCamera_VC") as! VisionCamera_VC
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//                break
+//            case 1:
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactUs_VC") as! ContactUs_VC
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//                break
+//            case 2:
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PrivacyPolicy_VC") as! PrivacyPolicy_VC
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//                break
+//            case 3:
+//                shareApp()
+//                break
+//            default:
+//                break
+//            }
+    }
+    
+    func shareApp(){
+        // Setting description
+        //Set the default sharing message.
+        let message = "Bharat Scan : Best Indian Document Scanning App Inspired by Atmnirbhar Bharat"
+        //Set the link to share.
+        if let link = NSURL(string: "https://www.apple.com/ios/app-store/")
+        {
+            let objectsToShare = [message,link] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+
+    
+}
+
+
+

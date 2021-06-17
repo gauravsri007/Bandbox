@@ -11,6 +11,7 @@ import XLPagerTabStrip
 
 class ProductList_VC: UIViewController,IndicatorInfoProvider {
  
+    @IBOutlet weak var view_bottom: UIView!
     @IBOutlet weak var tblView_productList: UITableView!
     var itemInfo: IndicatorInfo = "Profile"
 
@@ -24,9 +25,17 @@ class ProductList_VC: UIViewController,IndicatorInfoProvider {
         tblView_productList.dataSource = self
 
         // Do any additional setup after loading the view.
+        let tap_bottomView = UITapGestureRecognizer(target: self, action: #selector(self.handleTap_menu(_:)))
+        self.view_bottom.addGestureRecognizer(tap_bottomView)
+        
     }
     
+    @objc func handleTap_menu(_ sender: UITapGestureRecognizer? = nil) {
+        
+        let basketVC = self.storyboard!.instantiateViewController(withIdentifier:"Basket_VC") as! Basket_VC
+        self.navigationController?.pushViewController(basketVC, animated: true)
 
+    }
   
 
 }
@@ -36,6 +45,8 @@ extension ProductList_VC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductList_Cell", for: indexPath) as! ProductList_Cell
         
+        cell.view_amt_bg.roundCorners(corners: [.bottomLeft,.topLeft], radius: cell.view_amt_bg.frame.height)
+        
         return cell
     }
     
@@ -44,6 +55,6 @@ extension ProductList_VC:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 250
     }
 }
