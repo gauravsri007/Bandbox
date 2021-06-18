@@ -63,6 +63,7 @@ extension MyOrder_VC : UITableViewDataSource,UITableViewDelegate,MyOrderDelegate
     
     func viewDetailsTapped(cell: MyOrder_Cell) {
         let indexPath = self.tblView_MyOrder.indexPath(for: cell)
+        print("Enter viewDetailsTapped")
         
     }
     

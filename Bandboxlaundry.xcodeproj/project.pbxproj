@@ -73,6 +73,10 @@
 		40570F62267BCD56000EFD57 /* Login_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_VC.swift; sourceTree = "<group>"; };
 		40570F64267BCD85000EFD57 /* Forgot_password_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot_password_VC.swift; sourceTree = "<group>"; };
 		40570F66267BCD9F000EFD57 /* SignUp_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_VC.swift; sourceTree = "<group>"; };
+		40570F69267CFD8F000EFD57 /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CenturyGothic.ttf; sourceTree = "<group>"; };
+		40570F6A267CFD8F000EFD57 /* montserrat_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_medium.ttf; sourceTree = "<group>"; };
+		40570F6B267CFD90000EFD57 /* gothicb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothicb.ttf; sourceTree = "<group>"; };
+		40570F6C267CFD90000EFD57 /* montserrat_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = montserrat_bold.ttf; sourceTree = "<group>"; };
 		406752692675CC4800F1F460 /* Menu_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu_Cell.swift; sourceTree = "<group>"; };
 		40CF0A6826727DD200A284D6 /* Bandboxlaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandboxlaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CF0A6B26727DD200A284D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		4006DF6E2672AC8000D2DA1B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				40570F68267CFD7C000EFD57 /* Fonts */,
 				4006DF722673DEFD00D2DA1B /* Constant.swift */,
 				4006DF762673DF3F00D2DA1B /* Extention.swift */,
 				4006DF742673DF2600D2DA1B /* NetworkManager.swift */,
@@ -265,6 +270,17 @@
 				40570F66267BCD9F000EFD57 /* SignUp_VC.swift */,
 			);
 			path = "Pre Login";
+			sourceTree = "<group>";
+		};
+		40570F68267CFD7C000EFD57 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				40570F69267CFD8F000EFD57 /* CenturyGothic.ttf */,
+				40570F6B267CFD90000EFD57 /* gothicb.ttf */,
+				40570F6C267CFD90000EFD57 /* montserrat_bold.ttf */,
+				40570F6A267CFD8F000EFD57 /* montserrat_medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4067526B2675CC5700F1F460 /* Custom Cell */ = {
