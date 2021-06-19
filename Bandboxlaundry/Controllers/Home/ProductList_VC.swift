@@ -36,8 +36,7 @@ class ProductList_VC: UIViewController,IndicatorInfoProvider {
         self.navigationController?.pushViewController(basketVC, animated: true)
 
     }
-  
-
+    
 }
 
 

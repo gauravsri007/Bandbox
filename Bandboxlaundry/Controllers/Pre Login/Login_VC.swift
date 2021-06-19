@@ -39,6 +39,10 @@ class Login_VC: UIViewController {
     }
     
     @IBAction func signin_clicked(_ sender: Any) {
+        let homevc = self.storyboard?.instantiateViewController(withIdentifier: "Home_VC")as! Home_VC
+        homevc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(homevc, animated: true)
+//        self.present(homevc, animated: true, completion: nil)
     }
   
     @IBAction func facebook_clicked(_ sender: Any) {

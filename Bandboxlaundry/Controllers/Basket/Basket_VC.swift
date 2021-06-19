@@ -14,15 +14,28 @@ class Basket_VC: UIViewController {
     @IBOutlet weak var tblView_basket: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let tap_bottomView = UITapGestureRecognizer(target: self, action: #selector(self.handleTap_menu(_:)))
-         self.view_bottom.addGestureRecognizer(tap_bottomView)
+        self.view_bottom.addGestureRecognizer(tap_bottomView)
     }
     
+//    @IBAction func back_Clicked(_ sender: Any) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+
+        navigationController?.navigationBar.barTintColor = .systemGreen
+        navigationController?.navigationBar.tintColor = .white
+        
+    }
+    
+    
     @objc func handleTap_menu(_ sender: UITapGestureRecognizer? = nil) {
-         
-         let basketVC = self.storyboard!.instantiateViewController(withIdentifier:"MyOrder_VC") as! MyOrder_VC
+        
+        let basketVC = self.storyboard!.instantiateViewController(withIdentifier:"MyOrder_VC") as! MyOrder_VC
          self.navigationController?.pushViewController(basketVC, animated: true)
 
      }
