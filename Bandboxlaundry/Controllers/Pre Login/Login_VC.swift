@@ -23,6 +23,18 @@ class Login_VC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    
+    
+    override func viewWillLayoutSubviews() {
+        
+        //------------NAVIGATION BAR ---------------
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.isTranslucent = true
+        
+    }
+    
+    
     @IBAction func forgot_password_clicked(_ sender: Any) {
     }
     

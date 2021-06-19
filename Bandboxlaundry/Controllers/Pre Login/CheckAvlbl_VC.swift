@@ -12,12 +12,32 @@ class CheckAvlbl_VC: UIViewController {
 
     @IBOutlet weak var view_bottom: UIView!
     @IBOutlet weak var txtField_pincode: UITextField!
-    @IBOutlet weak var view_txtFieldBG: UIView!
+    @IBOutlet weak var view_txtFieldBG: UIView!{
+        didSet{
+            view_txtFieldBG.layer.borderWidth = 1
+            view_txtFieldBG.layer.borderColor = UIColor.gray.cgColor
+            view_txtFieldBG.layer.cornerRadius = 4
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    override func viewWillLayoutSubviews() {
+        
+        //------------NAVIGATION BAR ---------------
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.isTranslucent = true
+        
+    }
+    
+    
     
     @IBAction func check_avlbl_Clicked(_ sender: UIButton) {
     }

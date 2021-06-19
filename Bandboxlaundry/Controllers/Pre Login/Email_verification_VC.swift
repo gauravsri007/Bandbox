@@ -11,23 +11,30 @@ import UIKit
 class Email_verification_VC: UIViewController {
 
     @IBOutlet weak var txtField_email: UITextField!
+    @IBOutlet weak var view_txtFieldBG: UIView!{
+         didSet{
+             view_txtFieldBG.layer.borderWidth = 1
+             view_txtFieldBG.layer.borderColor = UIColor.gray.cgColor
+             view_txtFieldBG.layer.cornerRadius = 4
+         }
+     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
     
+
+    
     @IBAction func continue_to_app_clicked(_ sender: Any) {
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func back_Clicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }
