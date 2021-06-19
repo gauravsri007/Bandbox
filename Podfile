@@ -9,6 +9,8 @@ target 'Bandboxlaundry' do
   pod 'IHKeyboardAvoiding'
 #  pod 'Kingfisher'
   pod 'XLPagerTabStrip'
+  pod 'MaterialComponents/TextFields'
+
 #  pod 'Alamofire'
   # Pods for Bandboxlaundry
 
