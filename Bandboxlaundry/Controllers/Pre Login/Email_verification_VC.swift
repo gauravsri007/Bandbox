@@ -27,14 +27,24 @@ class Email_verification_VC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "", style: .plain, target: nil, action: nil)
+        
+    }
 
     
     @IBAction func continue_to_app_clicked(_ sender: Any) {
+        
+        
     }
     
-    @IBAction func back_Clicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+//    @IBAction func back_Clicked(_ sender: Any) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//    
 
 }

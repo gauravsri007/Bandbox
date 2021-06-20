@@ -34,24 +34,24 @@ class CheckAvlbl_VC: UIViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = true
-        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     
     
     @IBAction func check_avlbl_Clicked(_ sender: UIButton) {
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "", style: .plain, target: nil, action: nil)
+        let checkVC = self.storyboard!.instantiateViewController(withIdentifier:"Email_verification_VC") as! Email_verification_VC
+        self.navigationController?.pushViewController(checkVC, animated: true)
     }
     
     @IBAction func signin_Clicked(_ sender: Any) {
+        let loginVC = self.storyboard!.instantiateViewController(withIdentifier:"Login_VC") as! Login_VC
+         self.navigationController?.pushViewController(loginVC, animated: true)
+        
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

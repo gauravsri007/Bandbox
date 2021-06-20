@@ -172,6 +172,7 @@
 			children = (
 				4007FBB126765F0200B50E35 /* MyOrder_Cell.swift */,
 				4007FBB326765F1C00B50E35 /* MyOrder_VC.swift */,
+				400E644126763B7E00DD2B1D /* Basket_VC.swift */,
 			);
 			path = "My Order";
 			sourceTree = "<group>";
@@ -254,7 +255,6 @@
 		400E644026763AB900DD2B1D /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				400E644126763B7E00DD2B1D /* Basket_VC.swift */,
 				400E644326763BC500DD2B1D /* Basket_Cell.swift */,
 			);
 			path = Basket;

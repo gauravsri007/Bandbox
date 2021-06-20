@@ -84,5 +84,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38979BBC-EACC-454D-B079-3006B2F683CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bandboxlaundry/Controllers/Pre Login/Login_VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "signin_clicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38979BBC-EACC-454D-B079-3006B2F683CC - 7634bd5d63d69899"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bandboxlaundry.Login_VC.signin_clicked(Any) -&gt; ()"
+                  moduleName = "Bandboxlaundry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumargaurav/Desktop/Freelancing%20Projects/Bandbox/Project/Bandboxlaundry/Bandboxlaundry/Controllers/Pre%20Login/Login_VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "38979BBC-EACC-454D-B079-3006B2F683CC - 7634bd5d63d69899"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bandboxlaundry.Login_VC.signin_clicked(Any) -&gt; ()"
+                  moduleName = "Bandboxlaundry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumargaurav/Desktop/Freelancing%20Projects/Bandbox/Project/Bandboxlaundry/Bandboxlaundry/Controllers/Pre%20Login/Login_VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "665">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

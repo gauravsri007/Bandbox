@@ -17,7 +17,7 @@ class SignUp_VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
@@ -25,6 +25,15 @@ class SignUp_VC: UIViewController {
          self.navigationController?.navigationBar.isHidden = false
      }
     
+    override func viewWillLayoutSubviews() {
+        
+        txtField_email.placeholderColor(color: .white)
+        txtField_name.placeholderColor(color: .white)
+        txtField_mobile.placeholderColor(color: .white)
+        txtField_password.placeholderColor(color: .white)
+        txtField_confirm_password.placeholderColor(color: .white)
+        
+    }
     
     @IBAction func signup_clicked(_ sender: UIButton) {
     }

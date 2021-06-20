@@ -19,3 +19,14 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+
+extension UITextField {
+    func placeholderColor(color: UIColor) {
+        let attributeString = [
+            NSAttributedString.Key.foregroundColor: color.withAlphaComponent(0.8),
+            NSAttributedString.Key.font: self.font!
+            ] as [NSAttributedString.Key : Any]
+        self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: attributeString)
+    }
+}

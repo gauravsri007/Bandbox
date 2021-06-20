@@ -34,9 +34,6 @@ class Home_VC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
-        
-//        navigationController?.navigationBar.barTintColor = .systemGreen
-//                navigationController?.navigationBar.tintColor = .white
         navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "Your Basket (10)", style: .plain, target: nil, action: nil)
     }

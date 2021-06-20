@@ -13,14 +13,22 @@ class Forgot_password_VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillLayoutSubviews() {
+
+         txtField_email.placeholderColor(color: .white)
+     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
-         self.navigationController?.navigationBar.isHidden = false
-     }
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = .white
+        
+    }
 
     @IBAction func signin_clicked(_ sender: Any) {
         
