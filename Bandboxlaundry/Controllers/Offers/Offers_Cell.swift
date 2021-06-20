@@ -9,7 +9,14 @@
 import UIKit
 
 class Offers_Cell: UITableViewCell {
+    @IBOutlet weak var view_bg: UIView!{
+        didSet{
+            view_bg.layer.cornerRadius = 6
+            view_bg.addShadow(color: .gray)
+        }
+    }
 
+    @IBOutlet weak var img_offer: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

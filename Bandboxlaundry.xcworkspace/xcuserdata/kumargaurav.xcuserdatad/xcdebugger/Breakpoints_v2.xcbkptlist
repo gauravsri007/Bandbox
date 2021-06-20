@@ -14,8 +14,8 @@
             filePath = "Bandboxlaundry/Controllers/Home/Home_Container.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewControllers(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Bandboxlaundry/Controllers/Home/ProductList_VC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "handleTap_menu(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Bandboxlaundry/Controllers/My Order/MyOrder_VC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "viewDetailsTapped(cell:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -130,6 +130,102 @@
                   offsetFromSymbolStart = "665">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFFD33DF-D76E-4AC3-9DA7-F87DBAA4E2A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bandboxlaundry/Controllers/Home/Home_Container.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewControllers(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0FEE26E-4EA9-447C-AE15-91D681AA67EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bandboxlaundry/Controllers/Home/Home_Container.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewControllers(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBE63F11-CF5B-495C-8DCD-4851A6A6FCCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bandboxlaundry/Controllers/Home/Home_Container.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewControllers(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DBE63F11-CF5B-495C-8DCD-4851A6A6FCCE - f8cfc6a7ad4cd9f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bandboxlaundry.Home_Container.viewControllers(for: XLPagerTabStrip.PagerTabStripViewController) -&gt; Swift.Array&lt;__C.UIViewController&gt;"
+                  moduleName = "Bandboxlaundry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumargaurav/Desktop/Freelancing%20Projects/Bandbox/Project/Bandboxlaundry/Bandboxlaundry/Controllers/Home/Home_Container.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "269">
+               </Location>
+               <Location
+                  uuid = "DBE63F11-CF5B-495C-8DCD-4851A6A6FCCE - f8cfc6a7ad4cd9f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bandboxlaundry.Home_Container.viewControllers(for: XLPagerTabStrip.PagerTabStripViewController) -&gt; Swift.Array&lt;__C.UIViewController&gt;"
+                  moduleName = "Bandboxlaundry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumargaurav/Desktop/Freelancing%20Projects/Bandbox/Project/Bandboxlaundry/Bandboxlaundry/Controllers/Home/Home_Container.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "4071">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4899A163-FB4B-4EB5-8F61-0DC5F254671A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bandboxlaundry/Controllers/Home/Home_VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

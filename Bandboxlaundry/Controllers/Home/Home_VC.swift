@@ -34,19 +34,16 @@ class Home_VC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
-        navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Your Basket (10)", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillLayoutSubviews() {
-
+        let logo = UIImage(named: "logo")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
       }
 
     func setUIConfiguration(){
             
-//            self.cons_menu_trailing.constant = 0//self.view.frame.size.width
-//        print(" self.cons_menu_trailing.constant", self.cons_menu_trailing.constant)
-
             arr_menu_values = ["Home","My Profile","My Order","My Basket","Offers","Notification","Privacy Policy","Terms of Service","Help & Support","Rate Us","Share with Friends","Logout"]
             arr_menu_imagaes = ["home","account","order_history","my_cart","offer_zone","notification","privacy_policy","t&C","upport","rate_us","share","logout"]
            
@@ -147,18 +144,40 @@ extension Home_VC : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
-//            tableView.deselectRow(at: indexPath, animated: true)
-//            switch indexPath.row {
-//            case 0:
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "VisionCamera_VC") as! VisionCamera_VC
-//                vc.modalPresentationStyle = .fullScreen
-//                self.present(vc, animated: true, completion: nil)
-//                break
-//            case 1:
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactUs_VC") as! ContactUs_VC
-//                vc.modalPresentationStyle = .fullScreen
-//                self.present(vc, animated: true, completion: nil)
-//                break
+            tableView.deselectRow(at: indexPath, animated: true)
+            switch indexPath.row {
+            case 0:
+                   let homeVC = self.storyboard!.instantiateViewController(withIdentifier:"Home_VC") as! Home_VC
+                 self.navigationController?.pushViewController(homeVC, animated: true)
+                break
+                
+            case 2:
+                
+                navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "My Orders", style: .plain, target: nil, action: nil)
+                
+                let myOrderVC = self.storyboard!.instantiateViewController(withIdentifier:"MyOrder_VC") as! MyOrder_VC
+                self.navigationController?.pushViewController(myOrderVC, animated: true)
+                break
+            case 3:
+                
+                navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "Your Basket! (10)", style: .plain, target: nil, action: nil)
+                
+                let myOrderVC = self.storyboard!.instantiateViewController(withIdentifier:"Basket_VC") as! Basket_VC
+                self.navigationController?.pushViewController(myOrderVC, animated: true)
+                break
+            case 4:
+                
+                navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "Your Basket! (10)", style: .plain, target: nil, action: nil)
+                
+                let myOrderVC = self.storyboard!.instantiateViewController(withIdentifier:"Offers_VC") as! Offers_VC
+                self.navigationController?.pushViewController(myOrderVC, animated: true)
+                break
+            case 10:
+                shareApp()
+                break
 //            case 2:
 //                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PrivacyPolicy_VC") as! PrivacyPolicy_VC
 //                vc.modalPresentationStyle = .fullScreen
@@ -167,15 +186,15 @@ extension Home_VC : UITableViewDataSource,UITableViewDelegate{
 //            case 3:
 //                shareApp()
 //                break
-//            default:
-//                break
-//            }
+            default:
+                break
+            }
     }
     
     func shareApp(){
         // Setting description
         //Set the default sharing message.
-        let message = "Bharat Scan : Best Indian Document Scanning App Inspired by Atmnirbhar Bharat"
+        let message = "BandBox Laundry : Best laundry application"
         //Set the link to share.
         if let link = NSURL(string: "https://www.apple.com/ios/app-store/")
         {

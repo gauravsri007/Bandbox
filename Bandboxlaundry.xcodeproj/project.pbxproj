@@ -163,6 +163,7 @@
 				4006DF702673D77C00D2DA1B /* Home_VC.swift */,
 				4006DF782673EB9C00D2DA1B /* Home_Container.swift */,
 				4006DF7A2673EBD300D2DA1B /* ProductList_VC.swift */,
+				4006DF7C2673F27300D2DA1B /* ProductList_Cell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -170,9 +171,8 @@
 		4007FBB026765EDD00B50E35 /* My Order */ = {
 			isa = PBXGroup;
 			children = (
-				4007FBB126765F0200B50E35 /* MyOrder_Cell.swift */,
 				4007FBB326765F1C00B50E35 /* MyOrder_VC.swift */,
-				400E644126763B7E00DD2B1D /* Basket_VC.swift */,
+				4007FBB126765F0200B50E35 /* MyOrder_Cell.swift */,
 			);
 			path = "My Order";
 			sourceTree = "<group>";
@@ -255,6 +255,7 @@
 		400E644026763AB900DD2B1D /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				400E644126763B7E00DD2B1D /* Basket_VC.swift */,
 				400E644326763BC500DD2B1D /* Basket_Cell.swift */,
 			);
 			path = Basket;
@@ -287,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				406752692675CC4800F1F460 /* Menu_Cell.swift */,
-				4006DF7C2673F27300D2DA1B /* ProductList_Cell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";

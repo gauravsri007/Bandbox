@@ -20,23 +20,26 @@ class Basket_VC: UIViewController {
         self.view_bottom.addGestureRecognizer(tap_bottomView)
     }
     
-//    @IBAction func back_Clicked(_ sender: Any) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
 
+    override func viewWillLayoutSubviews() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Your Basket (10)", style: .plain, target: nil, action: nil)
+        
+        navigationController?.navigationBar.isHidden = false
+        
         navigationController?.navigationBar.barTintColor = .systemGreen
         navigationController?.navigationBar.tintColor = .white
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+ 
+
     }
     
     
     @objc func handleTap_menu(_ sender: UITapGestureRecognizer? = nil) {
         
-        let basketVC = self.storyboard!.instantiateViewController(withIdentifier:"MyOrder_VC") as! MyOrder_VC
-         self.navigationController?.pushViewController(basketVC, animated: true)
+
 
      }
 
@@ -44,7 +47,7 @@ class Basket_VC: UIViewController {
 }
 
 
-extension Basket_VC : UITableViewDataSource,UITableViewDelegate{
+extension Basket_VC : UITableViewDataSource,UITableViewDelegate,BasketDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -57,20 +60,29 @@ extension Basket_VC : UITableViewDataSource,UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Basket_Cell") as! Basket_Cell
-//            cell.menu_title.text = arr_menu_values[indexPath.row]
-//            cell.img_menu.image = UIImage(named: arr_menu_imagaes[indexPath.row])
-            return cell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Basket_Cell") as! Basket_Cell
+        cell.delegate = self
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
-            return 96
+        
+        return 96
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
-
-            }
+        
+        
     }
+    
+    
+    func minusTapped(cell: Basket_Cell) {
+        print("Minus tapped")
+    }
+    
+    func plusTapped(cell: Basket_Cell) {
+        print("Plus tapped")
+    }
+    
+}

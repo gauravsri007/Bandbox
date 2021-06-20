@@ -17,16 +17,17 @@ class MyOrder_VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap_bottomView = UITapGestureRecognizer(target: self, action: #selector(self.handleTap_menu(_:)))
-//        self.view_bottom.addGestureRecognizer(tap_bottomView)
+  
     }
     
-    @objc func handleTap_menu(_ sender: UITapGestureRecognizer? = nil) {
+    override func viewWillAppear(_ animated: Bool) {
+         navigationController?.navigationBar.isHidden = false
+         navigationController?.navigationBar.barTintColor = .white
+         navigationController?.navigationBar.tintColor = .white
          
-         let basketVC = self.storyboard!.instantiateViewController(withIdentifier:"Basket_VC") as! Basket_VC
-         self.navigationController?.pushViewController(basketVC, animated: true)
-
      }
+    
+
   
 
 }

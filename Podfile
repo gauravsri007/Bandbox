@@ -10,6 +10,7 @@ target 'Bandboxlaundry' do
 #  pod 'Kingfisher'
   pod 'XLPagerTabStrip'
   pod 'MaterialComponents/TextFields'
+  pod 'SDWebImage', '~> 5.0'
 
 #  pod 'Alamofire'
   # Pods for Bandboxlaundry
